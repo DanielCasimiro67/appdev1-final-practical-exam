@@ -1,3 +1,4 @@
+import { Input } from '@/components/ui/input'
 import { useState } from 'react'
 import blossom from '../../assets/blossom-flower.svg'
 import googleLogo from '../../assets/icons-google-logo.svg'
@@ -26,14 +27,14 @@ export default function Login() {
             <div className={styles.fields}>
               <div className={styles.field}>
                 <label className={styles.label} htmlFor="login-email">Email address</label>
-                <input className={styles.input} id="login-email" name="email" type="email" placeholder="Enter your email" autoComplete="email" required />
+                <Input className={styles.input} id="login-email" name="email" type="email" placeholder="Enter your email" autoComplete="email" required />
               </div>
               <div className={styles.field}>
                 <div className={styles.labelRow}>
                   <label className={styles.label} htmlFor="login-password">Password</label>
                   <a className={styles.forgotLink} href="#forgot-password" onClick={showForgotPassword}>forgot password</a>
                 </div>
-                <input className={styles.input} id="login-password" name="password" type="password" placeholder="Enter your password" autoComplete="current-password" required />
+                <Input className={styles.input} id="login-password" name="password" type="password" placeholder="Enter your password" autoComplete="current-password" required />
               </div>
             </div>
             <label className={styles.checkboxLabel}>
