@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import blossom from '../../assets/blossom-flower.svg'
+import googleLogo from '../../assets/icons-google-logo.svg'
+import appleLogo from '../../assets/icons-apple-logo.svg'
 import styles from './SignUp.module.css'
 
 export default function SignUp() {
@@ -41,6 +43,18 @@ export default function SignUp() {
             </label>
             <button className={styles.primaryButton} type="submit">Signup</button>
           </form>
+          <div className={styles.divider}>Or</div>
+          <div className={styles.socialButtons}>
+            <button className={styles.socialButton} type="button" onClick={() => setMessage('Google sign-in is not connected in this exam preview.')}>
+              <img src={googleLogo} width="24" height="24" alt="" />
+              <span>Sign in with Google</span>
+            </button>
+            <button className={styles.socialButton} type="button" onClick={() => setMessage('Apple sign-in is not connected in this exam preview.')}>
+              <img src={appleLogo} width="24" height="24" alt="" />
+              <span>Sign in with Apple</span>
+            </button>
+          </div>
+          <p className={styles.accountText}>Have an account? <a className={styles.accountLink} href="#login">Sign In</a></p>
           {message && <p className={styles.notice} role="status">{message}</p>}
         </div>
       </section>
