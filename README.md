@@ -1,0 +1,15 @@
+In this final project, I built the front end of the Login page and the Sign Up page using Vite and React. It is only the design. Even if it is only the interface, I learned much about how a web app is made step by step.
+
+About React components, now I truly understand that a page is made of small parts. Sign Up and Login are their own components with their own files. When I copied Sign Up to make Login, I realized how good this is, because I only changed the different parts like the title, the Name field, and the button. I also learned `useState`. It keeps the message, so when I click a button the message changes and the page update by itself. The `event.preventDefault()` stops the form from reloading the page.
+
+I separated the global CSS and the CSS Modules because they have different jobs. The `root.css` and `index.css` are for the things the whole app use, like fonts and base styles. The CSS Module is only for one component. Vite gives a unique class name, so the style in Login will not change the Sign Up. If everything is in one big file, the two pages can mess each other.
+
+Design tokens make the changes much easier. Before, the color `#3a5b22` was written directly in many places. If I want another green, I need to change all of them. Now I write it once as `--color-primary` and use `var(--color-primary)` everywhere. When I moved the values to tokens, the before and after screenshots are the same, so I realized I only changed how the CSS is organized, not how it looks.
+
+When I replaced the native input with the shadcn `Input`, almost everything stayed the same. It still makes a normal HTML input underneath, and it still accept `id`, `type`, `required`, and `autoComplete`. So the labels still connect and the browser validation still works. The checkboxes stay as regular HTML input. I learned that a ready-made component is not magic, it is still HTML with extra styling.
+
+The screenshots, testing, and separate commits really helped me. Screenshots show what each stage looks like, and I can compare before and after. `npm run build`, `npm run lint`, and Playwright check things that I can miss, like small screens, keyboard order, and the Back button. With 16 commits, each step is saved by itself, so I can go back if something break. I also realized the importance of doing a structured sequence, one stage at a time.
+
+I can explain confidently the components, `useState`, CSS Modules, design tokens, and how labels and validation work together. I still need more practice with the Tailwind and shadcn setup files like `vite.config.js`, `components.json`, and the `@` alias. I also need practice with `useSyncExternalStore` that listens to the URL, and with writing Playwright tests by myself. I want to practice the Git commands too, so I will not depend on help.
+
+For assistance, I used an AI assistant to help me with the setup, the code, and the testing. It explained each step, so I learned much better. I wrote this reflection to show what I really understand.
