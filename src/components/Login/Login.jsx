@@ -53,7 +53,7 @@ export default function Login() {
               <span>Sign in with Apple</span>
             </button>
           </div>
-          <p className={styles.accountText}>Have an account? <a className={styles.accountLink} href="#login">Sign In</a></p>
+          <p className={styles.accountText}>Don’t have an account? <a className={styles.accountLink} href="#signup">Sign Up</a></p>
           {message && <p className={styles.notice} role="status">{message}</p>}
         </div>
       </section>
