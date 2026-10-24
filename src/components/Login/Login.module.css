@@ -1,9 +1,9 @@
 .page {
   display: grid;
-  grid-template-columns: minmax(0, 708fr) minmax(0, 828fr);
+  grid-template-columns: var(--page-columns);
   width: 100%;
-  max-width: 1536px;
-  min-height: max(100svh, 1042px);
+  max-width: var(--page-width);
+  min-height: max(100svh, var(--page-height));
   margin-inline: auto;
 }
 
@@ -11,11 +11,11 @@
   display: flex;
   justify-content: center;
   min-width: 0;
-  padding: 238px 40px 100px 88px;
+  padding: var(--space-238) var(--space-40) var(--space-100) var(--space-88);
 }
 
 .content {
-  width: 404px;
+  width: var(--form-width);
   max-width: 100%;
 }
 
@@ -24,7 +24,7 @@
   align-items: center;
   justify-content: center;
   min-width: 0;
-  padding: 32px 0;
+  padding: var(--space-32) 0;
 }
 
 .blossom {
@@ -41,7 +41,7 @@
   }
 
   .left {
-    padding: 64px 24px;
+    padding: var(--space-64) var(--space-24);
   }
 
   .right {
@@ -50,10 +50,10 @@
 }
 
 .title {
-  margin: 0 0 6px;
-  font-size: 32px;
-  font-weight: 500;
-  line-height: 1.5;
+  margin: 0 0 var(--space-6);
+  font-size: var(--font-size-32);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-heading);
 }
 
 .form {
@@ -62,37 +62,37 @@
 
 .fields {
   display: grid;
-  gap: 20px;
+  gap: var(--space-20);
 }
 
 .field {
   display: grid;
-  gap: 4px;
+  gap: var(--space-4);
 }
 
 .label {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 21px;
+  font-size: var(--font-size-14);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-21);
 }
 
 .input {
   display: block;
   width: 100%;
   min-width: 0;
-  height: 32px;
-  padding: 6px 10px;
-  border: 1px solid #d9d9d9;
-  border-radius: 10px;
-  background: #fff;
-  color: #000;
-  font-size: 10px;
-  font-weight: 500;
-  line-height: 18px;
+  height: var(--size-32);
+  padding: var(--space-6) var(--space-10);
+  border: var(--stroke-1) solid var(--color-border);
+  border-radius: var(--radius-10);
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: var(--font-size-10);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-18);
 }
 
 .input::placeholder {
-  color: #b5b5b5;
+  color: var(--color-placeholder);
   opacity: 1;
 }
 
@@ -100,98 +100,98 @@
 .primaryButton:focus-visible,
 a:focus-visible,
 .socialButton:focus-visible {
-  outline: 2px solid #3a5b22;
-  outline-offset: 3px;
+  outline: var(--stroke-2) solid var(--color-primary);
+  outline-offset: var(--focus-offset);
 }
 
 .checkboxLabel {
   display: flex;
   align-items: center;
-  gap: 6px;
-  margin-top: 20px;
-  font-size: 9px;
-  font-weight: 500;
-  line-height: 14px;
+  gap: var(--space-6);
+  margin-top: var(--space-20);
+  font-size: var(--font-size-9);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-14);
 }
 
 .checkbox {
   flex: 0 0 auto;
-  width: 10px;
-  height: 10px;
+  width: var(--size-10);
+  height: var(--size-10);
   margin: 0;
-  accent-color: #3a5b22;
+  accent-color: var(--color-primary);
 }
 
 .termsLink {
-  color: #000;
+  color: var(--color-text);
   text-decoration: underline;
 }
 
 .primaryButton {
   display: block;
   width: 100%;
-  height: 32px;
-  margin-top: 24px;
-  padding: 4px 12px;
+  height: var(--size-32);
+  margin-top: var(--space-24);
+  padding: var(--space-4) var(--space-12);
   border: 0;
-  border-radius: 10px;
-  background: #3a5b22;
-  color: #fff;
-  font-size: 13px;
-  font-weight: 700;
+  border-radius: var(--radius-10);
+  background: var(--color-primary);
+  color: var(--color-surface);
+  font-size: var(--font-size-13);
+  font-weight: var(--font-weight-bold);
   cursor: pointer;
 }
 
 .notice {
-  margin: 16px 0 0;
-  color: #3a5b22;
-  font-size: 12px;
-  line-height: 1.5;
+  margin: var(--space-16) 0 0;
+  color: var(--color-primary);
+  font-size: var(--font-size-12);
+  line-height: var(--line-height-heading);
 }
 
 @media (max-width: 900px) {
   .input {
-    height: 44px;
-    font-size: 16px;
+    height: var(--size-44);
+    font-size: var(--font-size-16);
   }
 
   .primaryButton {
-    height: 44px;
+    height: var(--size-44);
   }
 
   .checkboxLabel {
-    min-height: 32px;
-    font-size: 12px;
+    min-height: var(--size-32);
+    font-size: var(--font-size-12);
   }
 
   .checkbox {
-    width: 16px;
-    height: 16px;
+    width: var(--size-16);
+    height: var(--size-16);
   }
 }
 
 .divider {
   display: flex;
   align-items: center;
-  gap: 8px;
-  margin-top: 64px;
-  color: #000;
-  font-size: 9px;
-  line-height: 18px;
+  gap: var(--space-8);
+  margin-top: var(--space-64);
+  color: var(--color-text);
+  font-size: var(--font-size-9);
+  line-height: var(--line-height-18);
 }
 
 .divider::before,
 .divider::after {
   flex: 1;
-  height: 1px;
-  background: #f1f1f1;
+  height: var(--size-1);
+  background: var(--color-divider);
   content: '';
 }
 
 .socialButtons {
   display: flex;
-  gap: 24px;
-  margin-top: 64px;
+  gap: var(--space-24);
+  margin-top: var(--space-64);
 }
 
 .socialButton {
@@ -199,16 +199,16 @@ a:focus-visible,
   flex: 1;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: var(--space-10);
   min-width: 0;
-  height: 32px;
-  padding: 4px;
-  border: 1px solid #d9d9d9;
-  border-radius: 10px;
-  background: #fff;
-  color: #000;
-  font-size: 12px;
-  font-weight: 500;
+  height: var(--size-32);
+  padding: var(--space-4);
+  border: var(--stroke-1) solid var(--color-border);
+  border-radius: var(--radius-10);
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: var(--font-size-12);
+  font-weight: var(--font-weight-medium);
   cursor: pointer;
 }
 
@@ -218,49 +218,49 @@ a:focus-visible,
 }
 
 .accountText {
-  margin: 20px 0 0;
-  font-size: 13px;
-  font-weight: 500;
-  line-height: 21px;
+  margin: var(--space-20) 0 0;
+  font-size: var(--font-size-13);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-21);
   text-align: center;
 }
 
 .accountLink {
-  color: #0f3dde;
+  color: var(--color-link);
   text-decoration: none;
 }
 
 @media (max-width: 480px) {
   .socialButtons {
     flex-direction: column;
-    gap: 12px;
-    margin-top: 32px;
+    gap: var(--space-12);
+    margin-top: var(--space-32);
   }
 
   .socialButton {
     flex: none;
     width: 100%;
-    height: 44px;
+    height: var(--size-44);
   }
 }
 
 .subtitle {
-  margin: 0 0 58px;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 21px;
+  margin: 0 0 var(--space-58);
+  font-size: var(--font-size-14);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-21);
 }
 
 .labelRow {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
+  gap: var(--space-12);
 }
 
 .forgotLink {
-  color: #0f3dde;
-  font-size: 10px;
-  font-weight: 500;
+  color: var(--color-link);
+  font-size: var(--font-size-10);
+  font-weight: var(--font-weight-medium);
   text-decoration: none;
 }

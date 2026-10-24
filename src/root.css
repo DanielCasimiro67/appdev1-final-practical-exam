@@ -1,0 +1,87 @@
+:root {
+
+  /* Colors */
+  --color-surface: #fff;
+  --color-text: #000;
+  --color-primary: #3a5b22;
+  --color-border: #d9d9d9;
+  --color-placeholder: #b5b5b5;
+  --color-divider: #f1f1f1;
+  --color-link: #0f3dde;
+
+  /* Typography */
+  --font-main: 'Poppins', sans-serif;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  --line-height-heading: 1.5;
+
+  /* Layout, spacing, and shape */
+  --page-columns: minmax(0, 708fr) minmax(0, 828fr);
+  --page-width: 1536px;
+  --page-height: 1042px;
+  --space-210: 210px;
+  --space-40: 40px;
+  --space-100: 100px;
+  --space-88: 88px;
+  --form-width: 404px;
+  --space-32: 32px;
+  --space-64: 64px;
+  --space-24: 24px;
+  --space-52: 52px;
+
+  /* Typography */
+  --font-size-32: 32px;
+
+  /* Layout, spacing, and shape */
+  --space-20: 20px;
+  --space-4: 4px;
+
+  /* Typography */
+  --font-size-14: 14px;
+  --line-height-21: 21px;
+
+  /* Layout, spacing, and shape */
+  --size-32: 32px;
+  --space-6: 6px;
+  --space-10: 10px;
+  --stroke-1: 1px;
+  --radius-10: 10px;
+
+  /* Typography */
+  --font-size-10: 10px;
+  --line-height-18: 18px;
+
+  /* Layout, spacing, and shape */
+  --stroke-2: 2px;
+  --focus-offset: 3px;
+
+  /* Typography */
+  --font-size-9: 9px;
+  --line-height-14: 14px;
+
+  /* Layout, spacing, and shape */
+  --size-10: 10px;
+  --space-12: 12px;
+
+  /* Typography */
+  --font-size-13: 13px;
+
+  /* Layout, spacing, and shape */
+  --space-16: 16px;
+
+  /* Typography */
+  --font-size-12: 12px;
+
+  /* Layout, spacing, and shape */
+  --size-44: 44px;
+
+  /* Typography */
+  --font-size-16: 16px;
+
+  /* Layout, spacing, and shape */
+  --size-16: 16px;
+  --space-8: 8px;
+  --size-1: 1px;
+  --space-238: 238px;
+  --space-58: 58px;
+}
