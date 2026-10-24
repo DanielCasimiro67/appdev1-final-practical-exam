@@ -250,3 +250,17 @@ a:focus-visible,
   font-weight: 500;
   line-height: 21px;
 }
+
+.labelRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.forgotLink {
+  color: #0f3dde;
+  font-size: 10px;
+  font-weight: 500;
+  text-decoration: none;
+}

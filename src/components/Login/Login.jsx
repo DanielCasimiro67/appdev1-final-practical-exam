@@ -12,9 +12,9 @@ export default function Login() {
     setMessage('This exam preview does not connect to an authentication service.')
   }
 
-  function showTerms(event) {
+  function showForgotPassword(event) {
     event.preventDefault()
-    setMessage('The terms & policy page is not included in this exam preview.')
+    setMessage('Password recovery is not connected in this exam preview.')
   }
 
   return (
@@ -25,23 +25,22 @@ export default function Login() {
           <form className={styles.form} onSubmit={handleSubmit}>
             <div className={styles.fields}>
               <div className={styles.field}>
-                <label className={styles.label} htmlFor="signup-name">Name</label>
-                <input className={styles.input} id="signup-name" name="name" type="text" placeholder="Enter your name" autoComplete="name" required />
+                <label className={styles.label} htmlFor="login-email">Email address</label>
+                <input className={styles.input} id="login-email" name="email" type="email" placeholder="Enter your email" autoComplete="email" required />
               </div>
               <div className={styles.field}>
-                <label className={styles.label} htmlFor="signup-email">Email address</label>
-                <input className={styles.input} id="signup-email" name="email" type="email" placeholder="Enter your email" autoComplete="email" required />
-              </div>
-              <div className={styles.field}>
-                <label className={styles.label} htmlFor="signup-password">Password</label>
-                <input className={styles.input} id="signup-password" name="password" type="password" placeholder="Enter your password" autoComplete="new-password" required />
+                <div className={styles.labelRow}>
+                  <label className={styles.label} htmlFor="login-password">Password</label>
+                  <a className={styles.forgotLink} href="#forgot-password" onClick={showForgotPassword}>forgot password</a>
+                </div>
+                <input className={styles.input} id="login-password" name="password" type="password" placeholder="Enter your password" autoComplete="current-password" required />
               </div>
             </div>
             <label className={styles.checkboxLabel}>
-              <input className={styles.checkbox} name="terms" type="checkbox" required />
-              <span>I agree to the <a className={styles.termsLink} href="#terms" onClick={showTerms}>terms &amp; policy</a></span>
+              <input className={styles.checkbox} name="remember" type="checkbox" />
+              <span>Remember for 30 days</span>
             </label>
-            <button className={styles.primaryButton} type="submit">Signup</button>
+            <button className={styles.primaryButton} type="submit">Login</button>
           </form>
           <div className={styles.divider}>Or</div>
           <div className={styles.socialButtons}>
