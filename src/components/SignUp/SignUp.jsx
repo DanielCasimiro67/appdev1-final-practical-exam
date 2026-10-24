@@ -1,3 +1,4 @@
+import { Input } from '@/components/ui/input'
 import { useState } from 'react'
 import blossom from '../../assets/blossom-flower.svg'
 import googleLogo from '../../assets/icons-google-logo.svg'
@@ -26,15 +27,15 @@ export default function SignUp() {
             <div className={styles.fields}>
               <div className={styles.field}>
                 <label className={styles.label} htmlFor="signup-name">Name</label>
-                <input className={styles.input} id="signup-name" name="name" type="text" placeholder="Enter your name" autoComplete="name" required />
+                <Input className={styles.input} id="signup-name" name="name" type="text" placeholder="Enter your name" autoComplete="name" required />
               </div>
               <div className={styles.field}>
                 <label className={styles.label} htmlFor="signup-email">Email address</label>
-                <input className={styles.input} id="signup-email" name="email" type="email" placeholder="Enter your email" autoComplete="email" required />
+                <Input className={styles.input} id="signup-email" name="email" type="email" placeholder="Enter your email" autoComplete="email" required />
               </div>
               <div className={styles.field}>
                 <label className={styles.label} htmlFor="signup-password">Password</label>
-                <input className={styles.input} id="signup-password" name="password" type="password" placeholder="Enter your password" autoComplete="new-password" required />
+                <Input className={styles.input} id="signup-password" name="password" type="password" placeholder="Enter your password" autoComplete="new-password" required />
               </div>
             </div>
             <label className={styles.checkboxLabel}>
