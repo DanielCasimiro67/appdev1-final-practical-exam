@@ -1,5 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
 
+/* Keep our existing reset instead of adding a second global reset. */
+@theme inline {
+  --font-sans: var(--font-main);
+  --color-background: var(--color-surface);
+  --color-foreground: var(--color-text);
+  --color-input: var(--color-border);
+  --color-ring: var(--color-primary);
+  --color-primary-foreground: var(--color-surface);
+  --color-muted-foreground: var(--color-placeholder);
+  --color-destructive: #b91c1c;
+  --radius-md: var(--radius-10);
+  --radius-sm: var(--radius-10);
+}
 *,
 *::before,
 *::after {
