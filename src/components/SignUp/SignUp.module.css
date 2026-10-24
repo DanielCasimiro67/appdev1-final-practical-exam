@@ -48,3 +48,10 @@
     display: none;
   }
 }
+
+.title {
+  margin: 0 0 52px;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.5;
+}
